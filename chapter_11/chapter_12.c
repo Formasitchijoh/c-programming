@@ -17,7 +17,7 @@
     }
      void performs_reversal(char array[],int n){
          int i;
-          int n = strlen(array[25]);
+           n = strlen(array);
 
 
          for(i =0; i < N-1;i++)
