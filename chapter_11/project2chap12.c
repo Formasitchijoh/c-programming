@@ -15,27 +15,30 @@ void read_drome(char array[]);
    }// This function indexes the different position in the string and
    // checks if they are equal
   void read_drome(char array[]){
-  int c,j = 0;
-  int i = N- 1;
-   while((c=getchar()) != '\n'  &&  j< N)// Reading the character one after the other from stdin and storing 
+  int c,j;
+  int i;
+   while((c=getchar()) != '\n'  &&  i< N)// Reading the character one after the other from stdin and storing 
    //it in an array
    {
    
        array[i] = c;
-       j++;
+       i++;
  }
-    while(i>j){
-       if(array[i--] != array[j++]) //indexing the diffferent position of th array
+    for(i=N-1; i>=j;i--){
+        for(j = 0;j <= i;j++)
+    
+       if(array[i] != array[j]) //indexing the diffferent position of th array
        {
-           printf(" %s palindrome \n",array);
+           printf(" NOT palindrome \n");
                 }
    
       else 
       {
-          printf(" %s Not palindrom\n",array);
+          printf("  palindrom\n");
       }
    }
   }
+  
   
   
   
